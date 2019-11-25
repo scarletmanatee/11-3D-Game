@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="3D Game"
+config/name="Intro to 3D"
 run/main_scene="res://Scenes/Spatial.tscn"
 config/icon="res://icon.png"
 
