@@ -14,6 +14,13 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector3.UP)
 	if jump and is_on_floor():
 		velocity.y = jump_speed
+
+	var bodies = get_colliding_bodies()
+	for body in bodies:
+		if body.is_in_group("Coins"):
+			Game.change_score(body.points)
+			body.kill()
+
 	
 func get_input():
 	var vy = velocity.y
