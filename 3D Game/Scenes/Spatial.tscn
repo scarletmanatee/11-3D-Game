@@ -29,7 +29,8 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 13.6566 )
 
 [node name="OuterWall" type="Spatial" parent="."]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+editor/display_folded = true
+transform = Transform( 2, 0, 0, 0, 2.5, 0, 0, 0, 2, 0, 0, 0 )
 
 [node name="Wall1" parent="OuterWall" instance=ExtResource( 3 )]
 transform = Transform( 0.5, 0, 0, 0, 2, 0, 0, 0, 1, -10, 0, 10 )
@@ -158,6 +159,7 @@ transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="CameraHUB" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="Camera" type="Camera" parent="CameraHUB"]
 transform = Transform( 1, 0, 0, 0, 0.868621, 0.495477, 0, -0.495477, 0.868621, 0, 6.23686, 8.50218 )
@@ -329,3 +331,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.432747, 2.27587, 3.57122 )
 
 [node name="Coin2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56725, 4.27587, 0.0712218 )
+
+[node name="GUI" type="MarginContainer" parent="."]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = 79.0
+
+[node name="Coins" type="HBoxContainer" parent="GUI"]
+margin_right = 984.0
+margin_bottom = 59.0
+
+[node name="Label" type="Label" parent="GUI/Coins"]
+margin_top = 22.0
+margin_right = 43.0
+margin_bottom = 36.0
+text = "Coins: "
